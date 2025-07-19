@@ -30,7 +30,7 @@ jobs:
       - name: Train model
         run: python src/train.py
       - name: Upload model
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: model
           path: model_train.pkl
@@ -47,7 +47,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Download model
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: model
       - name: Run Inference

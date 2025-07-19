@@ -16,7 +16,7 @@ jobs:
       - name: Run Training
         run: python src/train.py
       - name: Upload model
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: model
           path: model_train.pkl
