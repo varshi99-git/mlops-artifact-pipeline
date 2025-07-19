@@ -19,7 +19,7 @@ def train_model(X, y, config):
     return model
 
 if __name__ == "__main__":
-    config = load_config(r"C:/Users/saiva/mlops-artifact-pipeline/src/config/config.json")
+    config = load_config(r"./src/config/config.json")
     digits = load_digits()
     X, y = digits.data, digits.target
     model = train_model(X, y, config)
